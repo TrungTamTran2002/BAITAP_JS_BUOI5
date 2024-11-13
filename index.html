@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT_JS_BUOI5</title>
+    <style>
+        div{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Bài 1 -->
+        <h1>BÀI 1: QUẢN LÝ TUYỂN SINH</h1>
+        <label>Điểm Chuẩn: </label>
+        <input  id="Benchmark" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+    
+    <div>
+        <label>Chọn Khu Vực:</label>
+        <select id="area" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+            <option value="ckv">Chọn Khu Vực</option>
+            <option value="a">A</option> 
+            <option value="b">B</option>
+            <option value="c">C</option>
+        </select>
+    </div>
+    
+    <div>
+        <label>Chọn Đối Tượng:</label>
+        <select id="category" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+            <option value="cdt">Chọn Đối Tượng</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+    
+    <div>
+        <label>Điểm môn thi 1:</label>
+        <input id="score1" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <label>Điểm môn thi 2:</label>
+        <input id="score2" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <label>Điểm môn thi 3:</label>
+        <input id="score3" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <button id="btnb1" onclick="enrollmentManagement()">Kết Quả</button>
+    </div>
+
+    <div id="presultb1">
+
+    </div>
+
+    <hr>
+    <div>
+        <!-- Bài 2 -->
+        <h1>BÀI 2: Tính Tiền Điện</h1>
+        <label>Nhập Họ Và Tên: </label>
+        <input  id="fullname" type="text" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <label>Nhập số Kw: </label>
+        <input  id="numberkw" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <button id="btnb2" onclick="calculateElectric()">Tính Tiền Điện</button>
+    </div>
+
+    <div id="presultb2">
+
+    </div>
+
+    <HR></HR>
+
+    <div>
+        <h1>Bài 3: Tính thuế thu nhập cá nhân</h1>
+        <label>Nhập Họ Và Tên: </label>
+        <input  id="fullnameb3" type="text" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <label>Tổng Thu Nhập: </label>
+        <input  id="annualIncome" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <label>Số Người Phụ Thuộc: </label>
+        <input  id="numDependents" type="number" style="border: 2px solid rgb(202, 202, 202); border-radius: 5px; margin-left: 10px;">
+    </div>
+
+    <div>
+        <button id="btnb3" onclick="calculateTax()" >Tính Tiền Thuế</button>
+    </div>
+
+    <div id="presultb3">
+
+    </div>
+
+    <hr>
+    <h1>Bài 4: Tính Tiền Cáp</h1>
+    <div class="container">
+        <label>Chọn loại khách:</label>
+        <select id="customerType" onchange="toggleConnections()">
+            <option value="individual">Nhà Dân</option>
+            <option value="business">Doanh Nghiệp</option>
+        </select>
+    
+        <input id="customerCode" type="text" placeholder="Mã khách hàng">
+        <input id="connections" type="number" placeholder="Số kết nối" disabled>
+        <input id="premiumChannels" type="number" placeholder="Số kênh cao cấp">
+    
+        <button class="btn" onclick="calculateCableBill()">Tính tiền cáp</button>
+    
+        <div id="result" class="output"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
